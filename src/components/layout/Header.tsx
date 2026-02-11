@@ -180,7 +180,7 @@ export default function Header() {
                     <Link
                       href={item.href}
                       onClick={() => setMenuOpen(false)}
-                      className={`group relative inline-block font-sans text-[13px] tracking-[0.15em] uppercase transition-colors duration-300 ${
+                      className={`group relative inline-block font-sans text-[13px] tracking-[0.2em] uppercase transition-colors duration-300 ${
                         isActive
                           ? "text-or-ancien"
                           : "text-[#F5F5F0]/80 hover:text-or-ancien"
