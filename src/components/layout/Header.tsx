@@ -131,7 +131,7 @@ export default function Header() {
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed top-0 left-0 bottom-0 z-50 w-[380px] max-w-[85vw] bg-[#1A1512]/95 backdrop-blur-2xl border-r border-blanc-lin/[0.06] flex flex-col"
+            className="fixed top-0 left-0 bottom-0 z-50 w-[380px] max-w-[85vw] bg-noir-encre/95 backdrop-blur-md border-r border-blanc-lin/[0.06] flex flex-col"
           >
             {/* Top — close button + écusson */}
             <div className="flex items-center justify-between h-20 md:h-24 px-10">
@@ -149,11 +149,11 @@ export default function Header() {
                 transition={{ delay: 0.3, duration: 0.8 }}
               >
                 <Image
-                  src="/logo.webp"
+                  src="/logo-mirande.webp"
                   alt="La Mirande"
-                  width={100}
-                  height={115}
-                  className="h-10 w-auto brightness-0 invert opacity-20"
+                  width={200}
+                  height={40}
+                  className="h-6 w-auto brightness-0 invert opacity-25"
                 />
               </motion.div>
             </div>

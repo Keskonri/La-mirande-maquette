@@ -172,7 +172,7 @@ export const gastronomie = [
   {
     id: "gastronomique",
     name: "Restaurant Gastronomique",
-    badge: "1 étoile Michelin",
+    badge: "1* Guide Michelin · Étoile Verte",
     chef: "Chef Florent Pietravalle",
     shortDescription:
       "Cuisine de Provence d'une précision rare. Menus dégustation en 4, 6 ou 8 séquences.",
