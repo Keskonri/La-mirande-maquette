@@ -94,7 +94,7 @@ export default function Header() {
             <div className="flex items-center">
               <Link
                 href="/contact"
-                className={`font-sans text-[12px] tracking-[0.08em] px-5 py-2.5 transition-all duration-500 ${
+                className={`hidden md:inline-block font-sans text-[12px] tracking-[0.08em] px-5 py-2.5 transition-all duration-500 ${
                   scrolled
                     ? pathname === "/contact"
                       ? "border border-or-ancien/40 text-or-ancien hover:bg-or-ancien/10"
@@ -131,7 +131,7 @@ export default function Header() {
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed top-0 left-0 bottom-0 z-50 w-[380px] max-w-[85vw] bg-noir-encre/95 backdrop-blur-md border-r border-blanc-lin/[0.06] flex flex-col"
+            className="fixed top-0 left-0 bottom-0 z-50 w-full md:w-[380px] md:max-w-[85vw] bg-noir-encre/95 backdrop-blur-md border-r border-blanc-lin/[0.06] flex flex-col"
           >
             {/* Top — close button + écusson */}
             <div className="flex items-center justify-between h-20 md:h-24 px-10">
@@ -234,7 +234,7 @@ export default function Header() {
       </AnimatePresence>
 
       {/* Social icons — fixed bottom left */}
-      <div className="fixed bottom-8 left-8 md:bottom-10 md:left-10 z-30 flex items-center gap-2.5">
+      <div className="fixed bottom-8 left-8 md:bottom-10 md:left-10 z-30 hidden md:flex items-center gap-2.5">
         {[
           { label: "Facebook", icon: <Facebook size={16} strokeWidth={1.5} />, href: "#" },
           { label: "Instagram", icon: <Instagram size={16} strokeWidth={1.5} />, href: "#" },
@@ -257,7 +257,7 @@ export default function Header() {
       </div>
 
       {/* Language switcher — fixed bottom right */}
-      <div className="fixed bottom-8 right-8 md:bottom-10 md:right-10 z-30 flex items-center gap-2.5 font-sans text-[13px]">
+      <div className="fixed bottom-8 right-8 md:bottom-10 md:right-10 z-30 hidden md:flex items-center gap-2.5 font-sans text-[13px]">
         {["Fr", "En", "De"].map((lang, i) => (
           <button
             key={lang}
@@ -274,6 +274,16 @@ export default function Header() {
             {lang}
           </button>
         ))}
+      </div>
+
+      {/* Sticky bottom bar — mobile only */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 block md:hidden bg-ivoire/95 backdrop-blur-lg border-t border-or-ancien/15 px-4 py-3">
+        <Link
+          href="/contact"
+          className="btn-gold w-full text-center text-sm tracking-[0.08em] block"
+        >
+          Réserver votre séjour
+        </Link>
       </div>
     </>
   );

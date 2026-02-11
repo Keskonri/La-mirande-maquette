@@ -83,7 +83,7 @@ export default function ReservationSection() {
                     type="date"
                     value={arrivee}
                     onChange={(e) => setArrivee(e.target.value)}
-                    className="w-full bg-ivoire-chaud/10 border border-blanc-lin/12 text-blanc-lin font-body text-sm px-4 py-3.5 outline-none focus:border-or-ancien/40 transition-colors duration-300 [color-scheme:dark]"
+                    className="w-full min-h-[48px] bg-ivoire-chaud/10 border border-blanc-lin/12 text-blanc-lin font-body text-sm px-4 py-3.5 outline-none focus:border-or-ancien/40 transition-colors duration-300 [color-scheme:dark]"
                   />
                 </div>
 
@@ -96,7 +96,7 @@ export default function ReservationSection() {
                     type="date"
                     value={depart}
                     onChange={(e) => setDepart(e.target.value)}
-                    className="w-full bg-ivoire-chaud/10 border border-blanc-lin/12 text-blanc-lin font-body text-sm px-4 py-3.5 outline-none focus:border-or-ancien/40 transition-colors duration-300 [color-scheme:dark]"
+                    className="w-full min-h-[48px] bg-ivoire-chaud/10 border border-blanc-lin/12 text-blanc-lin font-body text-sm px-4 py-3.5 outline-none focus:border-or-ancien/40 transition-colors duration-300 [color-scheme:dark]"
                   />
                 </div>
 
@@ -108,7 +108,7 @@ export default function ReservationSection() {
                   <select
                     value={personnes}
                     onChange={(e) => setPersonnes(e.target.value)}
-                    className="w-full bg-ivoire-chaud/10 border border-blanc-lin/12 text-blanc-lin font-body text-sm px-4 py-3.5 outline-none focus:border-or-ancien/40 transition-colors duration-300 appearance-none [&>option]:bg-noir-encre [&>option]:text-blanc-lin"
+                    className="w-full min-h-[48px] bg-ivoire-chaud/10 border border-blanc-lin/12 text-blanc-lin font-body text-sm px-4 py-3.5 outline-none focus:border-or-ancien/40 transition-colors duration-300 appearance-none [&>option]:bg-noir-encre [&>option]:text-blanc-lin"
                   >
                     <option>1 adulte</option>
                     <option>2 adultes</option>
@@ -125,7 +125,7 @@ export default function ReservationSection() {
                   <select
                     value={chambre}
                     onChange={(e) => setChambre(e.target.value)}
-                    className="w-full bg-ivoire-chaud/10 border border-blanc-lin/12 text-blanc-lin font-body text-sm px-4 py-3.5 outline-none focus:border-or-ancien/40 transition-colors duration-300 appearance-none [&>option]:bg-noir-encre [&>option]:text-blanc-lin"
+                    className="w-full min-h-[48px] bg-ivoire-chaud/10 border border-blanc-lin/12 text-blanc-lin font-body text-sm px-4 py-3.5 outline-none focus:border-or-ancien/40 transition-colors duration-300 appearance-none [&>option]:bg-noir-encre [&>option]:text-blanc-lin"
                   >
                     <option value="all">Toutes les chambres</option>
                     {chambres.map((r) => (
@@ -185,13 +185,13 @@ export default function ReservationSection() {
 
             {/* Modal */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 100 }}
               transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-              className="fixed inset-0 z-[70] flex items-center justify-center px-6"
+              className="fixed inset-0 z-[70] flex items-end md:items-center justify-center px-0 md:px-6"
             >
-              <div className="bg-ivoire border border-or-ancien/15 p-8 md:p-12 max-w-lg w-full relative shadow-2xl">
+              <div className="bg-ivoire border border-or-ancien/15 p-6 md:p-12 max-w-lg w-full relative shadow-2xl rounded-t-2xl md:rounded-t-none max-h-[85vh] overflow-y-auto">
                 {/* Close */}
                 <button
                   onClick={() => setShowModal(false)}

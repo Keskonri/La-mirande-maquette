@@ -20,7 +20,7 @@ export default function HeroSection() {
   return (
     <section
       ref={ref}
-      className="relative h-screen overflow-hidden"
+      className="relative h-[80vh] md:h-screen overflow-hidden"
       aria-label="Accueil"
     >
       {/* Background with parallax + Ken Burns zoom */}

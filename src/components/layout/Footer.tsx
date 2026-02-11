@@ -13,7 +13,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-noir-encre text-blanc-lin/80">
+    <footer className="bg-noir-encre text-blanc-lin/80 pb-16 md:pb-0">
       {/* Gold separator line */}
       <div className="h-px bg-gradient-to-r from-transparent via-or-ancien/40 to-transparent" />
 
@@ -82,6 +82,26 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
+
+            {/* Mobile action buttons */}
+            <div className="flex flex-col gap-3 mt-6 md:hidden">
+              <a
+                href={`tel:${hotel.phone}`}
+                className="flex items-center justify-center gap-2 bg-or-ancien/10 border border-or-ancien/20 text-or-ancien font-sans text-sm tracking-[0.05em] py-3.5 hover:bg-or-ancien/20 transition-colors duration-300"
+              >
+                <Phone size={16} />
+                Appeler l&apos;hôtel
+              </a>
+              <a
+                href="https://maps.google.com/?q=La+Mirande+4+Place+de+l'Amirande+84000+Avignon"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 bg-or-ancien/10 border border-or-ancien/20 text-or-ancien font-sans text-sm tracking-[0.05em] py-3.5 hover:bg-or-ancien/20 transition-colors duration-300"
+              >
+                <MapPin size={16} />
+                Itinéraire
+              </a>
+            </div>
           </div>
 
           {/* Navigation — Sans-Serif uppercase */}
@@ -147,11 +167,11 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Votre email"
-                className="flex-1 bg-transparent py-2.5 font-sans text-sm text-blanc-lin placeholder:text-blanc-lin/20 outline-none"
+                className="flex-1 bg-transparent py-2.5 min-h-[44px] font-sans text-sm text-blanc-lin placeholder:text-blanc-lin/20 outline-none"
               />
               <button
                 type="submit"
-                className="p-2.5 text-or-ancien/50 hover:text-or-ancien transition-colors duration-300"
+                className="p-2.5 min-h-[44px] text-or-ancien/50 hover:text-or-ancien transition-colors duration-300"
                 aria-label="S'inscrire à la newsletter"
               >
                 <ArrowRight size={16} />

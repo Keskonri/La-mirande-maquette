@@ -12,7 +12,7 @@ function ChambresPreview() {
   const preview = chambres.slice(0, 3);
   return (
     <section className="section-padding bg-blanc-lin">
-      <div className="max-w-7xl mx-auto px-6 md:px-10">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-10">
         <SectionTitle
           surtitre="Chambres & Suites"
           title="Chaque chambre, une histoire"
@@ -82,13 +82,13 @@ function TablesPreview() {
   const resto = gastronomie[0];
   return (
     <section className="section-padding bg-ivoire-chaud">
-      <div className="max-w-7xl mx-auto px-6 md:px-10">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-10">
         <SectionTitle
           surtitre="Gastronomie"
           title="Quatre tables, une philosophie"
         />
         <ScrollReveal>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center">
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
                 src={resto.image}
@@ -124,12 +124,12 @@ function ExperiencesPreview() {
   const preview = experiences.slice(0, 2);
   return (
     <section className="section-padding bg-blanc-lin">
-      <div className="max-w-7xl mx-auto px-6 md:px-10">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-10">
         <SectionTitle
           surtitre="Expériences"
           title="Bien plus qu'un hôtel"
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {preview.map((exp, i) => (
             <ScrollReveal key={exp.slug} delay={i * 0.1}>
               <div className="group relative aspect-[4/3] overflow-hidden cursor-pointer">

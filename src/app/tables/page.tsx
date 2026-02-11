@@ -24,7 +24,7 @@ export default function TablesPage() {
 
       {/* Introduction */}
       <section className="section-padding bg-ivoire-chaud">
-        <div className="max-w-3xl mx-auto px-6 md:px-10 text-center">
+        <div className="max-w-3xl mx-auto px-4 md:px-6 lg:px-10 text-center">
           <ScrollReveal>
             <p className="font-accent italic text-lg md:text-xl text-terre leading-relaxed">
               De la cuisine étoilée à la pizza au feu de bois, de la Table Haute
@@ -45,10 +45,10 @@ export default function TablesPage() {
             i % 2 === 0 ? "bg-blanc-lin" : "bg-ivoire-chaud"
           }`}
         >
-          <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-10">
             <ScrollReveal>
               <div
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center ${
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center ${
                   i % 2 === 1 ? "lg:[direction:rtl]" : ""
                 }`}
               >
