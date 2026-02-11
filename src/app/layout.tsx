@@ -36,6 +36,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
   icons: {
     icon: [
       { url: "/logo.webp", type: "image/webp" },
