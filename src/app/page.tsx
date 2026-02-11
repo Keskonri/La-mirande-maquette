@@ -168,23 +168,6 @@ export default function Home() {
       <TablesPreview />
       <ExperiencesPreview />
       <EngagementsSection />
-      {/* CTA final */}
-      <section className="section-padding bg-bleu-papes text-center">
-        <ScrollReveal>
-          <p className="font-sans text-[11px] tracking-[0.3em] uppercase text-or-ancien/70 mb-4">
-            Réservation
-          </p>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-blanc-lin mb-6">
-            Votre séjour à La Mirande
-          </h2>
-          <p className="font-accent italic text-lg text-creme/70 mb-10 max-w-xl mx-auto">
-            Sept siècles d&apos;histoire vous attendent
-          </p>
-          <Link href="/contact" className="btn-gold">
-            Réserver votre séjour
-          </Link>
-        </ScrollReveal>
-      </section>
     </>
   );
 }
