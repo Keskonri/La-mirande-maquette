@@ -99,7 +99,7 @@ export default function Header() {
                     ? pathname === "/contact"
                       ? "border border-or-ancien/40 text-or-ancien hover:bg-or-ancien/10"
                       : "bg-or-ancien text-blanc-lin hover:bg-[#b8953a]"
-                    : "bg-[#C9A96E] text-noir-encre border border-transparent hover:bg-transparent hover:border-[#C9A96E]/60 hover:text-[#C9A96E] backdrop-blur-sm"
+                    : "bg-or-ancien text-noir-encre border border-transparent hover:bg-transparent hover:border-or-ancien/60 hover:text-or-ancien backdrop-blur-sm"
                 }`}
               >
                 Réserver
@@ -131,7 +131,7 @@ export default function Header() {
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed top-0 left-0 bottom-0 z-50 w-[380px] max-w-[85vw] bg-[#1A1512]/92 backdrop-blur-xl border-r border-blanc-lin/[0.06] flex flex-col"
+            className="fixed top-0 left-0 bottom-0 z-50 w-[380px] max-w-[85vw] bg-[#1A1512]/95 backdrop-blur-2xl border-r border-blanc-lin/[0.06] flex flex-col"
           >
             {/* Top — close button + écusson */}
             <div className="flex items-center justify-between h-20 md:h-24 px-10">

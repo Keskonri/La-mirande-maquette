@@ -42,7 +42,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-noir-encre/40 via-noir-encre/15 to-noir-encre/70" />
 
       {/* Bottom shelf gradient — anchors social icons & language switcher */}
-      <div className="absolute bottom-0 left-0 right-0 h-[12%] bg-gradient-to-t from-black/40 to-transparent pointer-events-none z-[5]" />
+      <div className="absolute bottom-0 left-0 right-0 h-[14%] bg-gradient-to-t from-black/50 to-transparent pointer-events-none z-[5]" />
 
       {/* Content — nudged slightly above center */}
       <motion.div

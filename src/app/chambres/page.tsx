@@ -47,7 +47,7 @@ export default function ChambresPage() {
                   className="group block"
                 >
                   {/* Image container */}
-                  <div className="relative aspect-[3/4] overflow-hidden">
+                  <div className="relative aspect-[3/4] overflow-hidden card-hover">
                     <Image
                       src={room.image}
                       alt={`Chambre ${room.name}`}

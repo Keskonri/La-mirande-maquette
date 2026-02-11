@@ -30,6 +30,7 @@ export const chambres = [
     slug: "la-roseraie",
     name: "La Roseraie",
     category: "Chambre Supérieure",
+    patternName: "Toile à la Roseraie — Manufacture d'Oberkampf, circa 1780",
     shortDescription:
       "Toile florale du XVIIIe aux teintes poudre et céladon, vue sur le jardin intérieur.",
     longDescription:
@@ -62,6 +63,7 @@ export const chambres = [
     slug: "le-grand-corail",
     name: "Le Grand Corail",
     category: "Chambre Prestige",
+    patternName: "Toile aux Coraux — Impression sur lin, XVIIIe siècle",
     shortDescription:
       "Motifs marins d'inspiration exotique, lit à baldaquin en noyer massif.",
     longDescription:
@@ -95,6 +97,7 @@ export const chambres = [
     slug: "le-perroquet",
     name: "Le Perroquet",
     category: "Chambre Prestige",
+    patternName: "Toile aux Perroquets — Indienne peinte, Provence, circa 1760",
     shortDescription:
       "Oiseaux de paradis sur fond d'indigo, vue sur le Palais des Papes.",
     longDescription:
@@ -128,6 +131,7 @@ export const chambres = [
     slug: "la-corne-dabondance",
     name: "La Corne d'Abondance",
     category: "Suite Prestige",
+    patternName: "Toile à la Corne d'Abondance — Manufacture de Jouy, circa 1785",
     shortDescription:
       "Notre plus grande suite : toile mythologique aux ors chauds, salon privé avec cheminée.",
     longDescription:

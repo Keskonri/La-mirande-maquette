@@ -57,6 +57,9 @@ export default async function ChambreDetailPage({
             {/* Description */}
             <div className="lg:col-span-3">
               <ScrollReveal>
+                <p className="font-accent italic text-sm text-or-ancien/70 mb-2">
+                  {room.patternName}
+                </p>
                 <h2 className="font-display text-2xl md:text-3xl text-noir-encre mb-6">
                   {room.name}
                 </h2>

@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     apple: "/logo.webp",
   },
   title: {
-    default: "La Mirande — Hôtel particulier 5★ à Avignon",
+    default: "La Mirande — Hôtel 5 Étoiles Avignon",
     template: "%s | La Mirande",
   },
   description:

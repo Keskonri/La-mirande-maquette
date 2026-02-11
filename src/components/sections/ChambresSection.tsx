@@ -27,7 +27,7 @@ export default function ChambresSection() {
               >
                 <article>
                   {/* Image with overlay content */}
-                  <div className="relative aspect-[3/4] overflow-hidden">
+                  <div className="relative aspect-[3/4] overflow-hidden card-hover">
                     <Image
                       src={room.image}
                       alt={`Chambre ${room.name} — ${room.vue}`}
