@@ -234,7 +234,7 @@ export default function Header() {
       </AnimatePresence>
 
       {/* Social icons — fixed bottom left */}
-      <div className="fixed bottom-8 left-8 md:bottom-10 md:left-10 z-30 hidden md:flex items-center gap-2.5">
+      <div className="fixed bottom-12 left-8 md:bottom-14 md:left-10 z-30 hidden md:flex items-center gap-2.5">
         {[
           { label: "Facebook", icon: <Facebook size={16} strokeWidth={1.5} />, href: "#" },
           { label: "Instagram", icon: <Instagram size={16} strokeWidth={1.5} />, href: "#" },
@@ -257,7 +257,7 @@ export default function Header() {
       </div>
 
       {/* Language switcher — fixed bottom right */}
-      <div className="fixed bottom-8 right-8 md:bottom-10 md:right-10 z-30 hidden md:flex items-center gap-2.5 font-sans text-[13px]">
+      <div className="fixed bottom-12 right-8 md:bottom-14 md:right-10 z-30 hidden md:flex items-center gap-2.5 font-sans text-[13px]">
         {["Fr", "En", "De"].map((lang, i) => (
           <button
             key={lang}
