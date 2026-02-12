@@ -46,7 +46,7 @@ export const chambres = [
       "https://www.la-mirande.fr/_novaimg/4661485-1432531_0_0_4800_3200_2000_1333.webp",
     gallery: [
       "https://www.la-mirande.fr/_novaimg/4772203-1434004_0_0_3448_4592_675_900.webp",
-      "https://www.la-mirande.fr/_novaimg/4661295-1432472_0_0_4032_3024_1200_900.webp",
+      "https://www.la-mirande.fr/_novaimg/4661295-1432472_0_0_4032_3024_2000_1500.webp",
       "https://www.la-mirande.fr/_novaimg/4655014-1432341_0_0_2551_3825_600_900.webp",
     ],
     amenities: [
@@ -80,7 +80,7 @@ export const chambres = [
     gallery: [
       "https://www.la-mirande.fr/_novaimg/4666301-1434006_0_0_3204_4770_604_900.webp",
       "https://www.la-mirande.fr/_novaimg/4661024-1432395_0_0_2011_3017_599_900.webp",
-      "https://www.la-mirande.fr/_novaimg/4655013-1432400_190_0_4264_3200_1200_900.webp",
+      "https://www.la-mirande.fr/_novaimg/4655013-1432400_190_0_4264_3200_2000_1500.webp",
     ],
     amenities: [
       "Salon privé avec méridienne",
@@ -148,7 +148,7 @@ export const chambres = [
     gallery: [
       "https://www.la-mirande.fr/_novaimg/4661026-1432396_0_0_3200_4800_600_900.webp",
       "https://www.la-mirande.fr/_novaimg/4661027-1432397_0_0_2016_3024_600_900.webp",
-      "https://www.la-mirande.fr/_novaimg/4656320-1432779_26_0_1806_1354_1200_900.webp",
+      "https://www.la-mirande.fr/_novaimg/4656320-1432779_26_0_1806_1354_2000_1500.webp",
     ],
     amenities: [
       "Salon privé avec cheminée",
