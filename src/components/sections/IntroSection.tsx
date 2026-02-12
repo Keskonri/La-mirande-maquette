@@ -33,7 +33,7 @@ export default function IntroSection() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <blockquote className="font-accent italic text-2xl md:text-3xl text-bleu-papes leading-relaxed font-light">
+              <blockquote className="font-accent italic text-2xl md:text-3xl text-or-ancien leading-relaxed font-light">
                 &laquo;&nbsp;Il y a des lieux où le temps ne passe pas.
                 Il se pose.&nbsp;&raquo;
               </blockquote>

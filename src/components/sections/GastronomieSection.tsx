@@ -30,7 +30,7 @@ export default function GastronomieSection() {
                 onClick={() => setActiveTab(i)}
                 className={`tab-underline font-sans text-[13px] tracking-[0.06em] px-3 py-2 transition-colors duration-400 ${
                   i === activeTab
-                    ? "text-bleu-papes active"
+                    ? "text-or-ancien active"
                     : "text-bleu-gris hover:text-terre"
                 }`}
               >

@@ -21,7 +21,7 @@ export default function TestimonialsSection() {
   const t = testimonials[current];
 
   return (
-    <section className="section-padding bg-bleu-papes relative overflow-hidden">
+    <section className="section-padding bg-noir-encre relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-12 left-1/2 -translate-x-1/2 text-or-ancien/10">
         <Quote size={120} strokeWidth={0.5} />

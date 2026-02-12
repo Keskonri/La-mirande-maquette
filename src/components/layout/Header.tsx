@@ -117,7 +117,7 @@ export default function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="fixed inset-0 z-40 bg-[#2B1E16]/50 backdrop-blur-sm [backdrop-filter:blur(4px)_saturate(0.8)_sepia(0.15)]"
+            className="fixed inset-0 z-40 bg-noir-encre/60 backdrop-blur-sm"
             onClick={() => setMenuOpen(false)}
           />
         )}
@@ -234,7 +234,7 @@ export default function Header() {
       </AnimatePresence>
 
       {/* Social icons — fixed bottom left */}
-      <div className="fixed bottom-6 left-8 md:bottom-7 md:left-10 z-30 hidden md:flex items-center gap-2.5">
+      <div className="fixed bottom-2.5 left-8 md:bottom-3 md:left-10 z-30 hidden md:flex items-center gap-2.5">
         {[
           { label: "Facebook", icon: <Facebook size={16} strokeWidth={1.5} />, href: "#" },
           { label: "Instagram", icon: <Instagram size={16} strokeWidth={1.5} />, href: "#" },
@@ -257,7 +257,7 @@ export default function Header() {
       </div>
 
       {/* Language switcher — fixed bottom right */}
-      <div className="fixed bottom-6 right-8 md:bottom-7 md:right-10 z-30 hidden md:flex items-center gap-2.5 font-sans text-[13px]">
+      <div className="fixed bottom-2.5 right-8 md:bottom-3 md:right-10 z-30 hidden md:flex items-center gap-2.5 font-sans text-[13px]">
         {["Fr", "En", "De"].map((lang, i) => (
           <button
             key={lang}

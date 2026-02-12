@@ -83,7 +83,7 @@ export default function ReservationSection() {
                     type="date"
                     value={arrivee}
                     onChange={(e) => setArrivee(e.target.value)}
-                    className="w-full min-h-[48px] bg-ivoire-chaud/10 border border-blanc-lin/12 text-blanc-lin font-body text-sm px-4 py-3.5 outline-none focus:border-or-ancien/40 transition-colors duration-300 [color-scheme:dark]"
+                    className="w-full min-h-[48px] bg-ivoire-chaud/10 border border-blanc-lin/12 text-blanc-lin font-body text-sm px-4 py-3.5 outline-none focus:border-or-ancien/40 transition-colors duration-300 accent-or-ancien [color-scheme:dark]"
                   />
                 </div>
 
@@ -96,7 +96,7 @@ export default function ReservationSection() {
                     type="date"
                     value={depart}
                     onChange={(e) => setDepart(e.target.value)}
-                    className="w-full min-h-[48px] bg-ivoire-chaud/10 border border-blanc-lin/12 text-blanc-lin font-body text-sm px-4 py-3.5 outline-none focus:border-or-ancien/40 transition-colors duration-300 [color-scheme:dark]"
+                    className="w-full min-h-[48px] bg-ivoire-chaud/10 border border-blanc-lin/12 text-blanc-lin font-body text-sm px-4 py-3.5 outline-none focus:border-or-ancien/40 transition-colors duration-300 accent-or-ancien [color-scheme:dark]"
                   />
                 </div>
 
@@ -108,7 +108,7 @@ export default function ReservationSection() {
                   <select
                     value={personnes}
                     onChange={(e) => setPersonnes(e.target.value)}
-                    className="w-full min-h-[48px] bg-ivoire-chaud/10 border border-blanc-lin/12 text-blanc-lin font-body text-sm px-4 py-3.5 outline-none focus:border-or-ancien/40 transition-colors duration-300 appearance-none [&>option]:bg-noir-encre [&>option]:text-blanc-lin"
+                    className="w-full min-h-[48px] bg-ivoire-chaud/10 border border-blanc-lin/12 text-blanc-lin font-body text-sm px-4 py-3.5 outline-none focus:border-or-ancien/40 transition-colors duration-300 accent-or-ancien appearance-none [&>option]:bg-noir-encre [&>option]:text-blanc-lin"
                   >
                     <option>1 adulte</option>
                     <option>2 adultes</option>
@@ -125,7 +125,7 @@ export default function ReservationSection() {
                   <select
                     value={chambre}
                     onChange={(e) => setChambre(e.target.value)}
-                    className="w-full min-h-[48px] bg-ivoire-chaud/10 border border-blanc-lin/12 text-blanc-lin font-body text-sm px-4 py-3.5 outline-none focus:border-or-ancien/40 transition-colors duration-300 appearance-none [&>option]:bg-noir-encre [&>option]:text-blanc-lin"
+                    className="w-full min-h-[48px] bg-ivoire-chaud/10 border border-blanc-lin/12 text-blanc-lin font-body text-sm px-4 py-3.5 outline-none focus:border-or-ancien/40 transition-colors duration-300 accent-or-ancien appearance-none [&>option]:bg-noir-encre [&>option]:text-blanc-lin"
                   >
                     <option value="all">Toutes les chambres</option>
                     {chambres.map((r) => (

@@ -84,7 +84,7 @@ export default function ExperiencesPage() {
       ))}
 
       {/* CTA */}
-      <section className="section-padding bg-bleu-papes text-center">
+      <section className="section-padding bg-noir-encre text-center">
         <ScrollReveal>
           <p className="font-sans text-[11px] tracking-[0.3em] uppercase text-or-ancien/70 mb-4">
             Sur mesure

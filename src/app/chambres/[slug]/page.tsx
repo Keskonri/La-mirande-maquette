@@ -242,13 +242,13 @@ export default async function ChambreDetailPage({
               >
                 <ArrowLeft
                   size={20}
-                  className="text-terre/40 group-hover:text-bleu-papes transition-colors"
+                  className="text-terre/40 group-hover:text-or-ancien transition-colors"
                 />
                 <div>
                   <p className="font-sans text-[10px] tracking-[0.15em] uppercase text-terre/40 mb-1">
                     Précédente
                   </p>
-                  <p className="font-display text-lg text-noir-encre group-hover:text-bleu-papes transition-colors">
+                  <p className="font-display text-lg text-noir-encre group-hover:text-or-ancien transition-colors">
                     {prevRoom.name}
                   </p>
                 </div>
@@ -265,13 +265,13 @@ export default async function ChambreDetailPage({
                   <p className="font-sans text-[10px] tracking-[0.15em] uppercase text-terre/40 mb-1">
                     Suivante
                   </p>
-                  <p className="font-display text-lg text-noir-encre group-hover:text-bleu-papes transition-colors">
+                  <p className="font-display text-lg text-noir-encre group-hover:text-or-ancien transition-colors">
                     {nextRoom.name}
                   </p>
                 </div>
                 <ArrowRight
                   size={20}
-                  className="text-terre/40 group-hover:text-bleu-papes transition-colors"
+                  className="text-terre/40 group-hover:text-or-ancien transition-colors"
                 />
               </Link>
             ) : (
