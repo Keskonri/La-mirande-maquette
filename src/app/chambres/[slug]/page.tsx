@@ -51,92 +51,159 @@ export default async function ChambreDetailPage({
       />
 
       {/* Room details */}
-      <section className="section-padding bg-ivoire-chaud">
-        <div className="max-w-6xl mx-auto px-6 md:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
-            {/* Description */}
-            <div className="lg:col-span-3">
-              <ScrollReveal>
-                <p className="font-accent italic text-sm text-or-ancien/70 mb-2">
-                  {room.patternName}
-                </p>
-                <h2 className="font-display text-2xl md:text-3xl text-noir-encre mb-6">
-                  {room.name}
-                </h2>
-                <p className="font-body text-anthracite leading-relaxed text-lg">
-                  {room.longDescription}
-                </p>
-              </ScrollReveal>
+      <section className="py-16 md:py-24 bg-blanc-lin">
+        <div className="max-w-4xl mx-auto px-6 md:px-10">
+          <ScrollReveal>
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-noir-encre mb-6">
+              {room.name}
+            </h1>
+            <p className="font-accent text-xl md:text-2xl text-or-ancien mb-10">
+              {room.shortDescription}
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.1}>
+            <div className="font-body text-lg leading-relaxed text-noir-encre/80 mb-14 space-y-5">
+              <p>{room.longDescription}</p>
+              <p>
+                Chaque détail de cette chambre a été pensé pour vous offrir une
+                expérience unique. Du mobilier d&apos;époque aux équipements
+                modernes, tout se conjugue pour créer un havre de paix où le
+                temps semble suspendu.
+              </p>
             </div>
+          </ScrollReveal>
 
-            {/* Info card */}
-            <div className="lg:col-span-2">
-              <ScrollReveal delay={0.15}>
-                <div className="bg-blanc-lin p-8 border border-or-ancien/15">
-                  <p className="font-sans text-[11px] tracking-[0.2em] uppercase text-or-ancien mb-6">
-                    Informations
-                  </p>
-                  <div className="space-y-5">
-                    <div className="flex items-center gap-3">
-                      <Maximize2 size={16} className="text-bleu-gris" />
-                      <div>
-                        <p className="font-sans text-[11px] text-bleu-gris uppercase tracking-wider">
-                          Surface
-                        </p>
-                        <p className="font-body text-noir-encre">
-                          {room.surface}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <Eye size={16} className="text-bleu-gris" />
-                      <div>
-                        <p className="font-sans text-[11px] text-bleu-gris uppercase tracking-wider">
-                          Vue
-                        </p>
-                        <p className="font-body text-noir-encre">{room.vue}</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <BedDouble size={16} className="text-bleu-gris" />
-                      <div>
-                        <p className="font-sans text-[11px] text-bleu-gris uppercase tracking-wider">
-                          Literie
-                        </p>
-                        <p className="font-body text-noir-encre">
-                          {room.bedType}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="border-t border-or-ancien/10 mt-6 pt-6">
-                    <p className="font-sans text-[11px] text-bleu-gris uppercase tracking-wider mb-1">
-                      À partir de
+          {/* Info card */}
+          <ScrollReveal delay={0.15}>
+            <div className="bg-ivoire-chaud p-8 md:p-10 border border-or-ancien/15 mb-14">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+                <div className="flex items-center gap-3">
+                  <Maximize2 size={16} className="text-or-ancien" />
+                  <div>
+                    <p className="font-sans text-[10px] text-terre/50 uppercase tracking-wider">
+                      Surface
                     </p>
-                    <p className="font-display text-3xl text-noir-encre">
-                      {room.price}{" "}
-                      <span className="font-body text-base text-bleu-gris/70">
-                        € / nuit
-                      </span>
-                    </p>
+                    <p className="font-body text-noir-encre">{room.surface}</p>
                   </div>
-
-                  <Link
-                    href="/contact"
-                    className="btn-gold w-full mt-6 text-center"
-                  >
-                    Réserver cette chambre
-                  </Link>
                 </div>
-              </ScrollReveal>
+                <div className="flex items-center gap-3">
+                  <Eye size={16} className="text-or-ancien" />
+                  <div>
+                    <p className="font-sans text-[10px] text-terre/50 uppercase tracking-wider">
+                      Vue
+                    </p>
+                    <p className="font-body text-noir-encre">{room.vue}</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <BedDouble size={16} className="text-or-ancien" />
+                  <div>
+                    <p className="font-sans text-[10px] text-terre/50 uppercase tracking-wider">
+                      Literie
+                    </p>
+                    <p className="font-body text-noir-encre">{room.bedType}</p>
+                  </div>
+                </div>
+              </div>
+              <div className="border-t border-or-ancien/10 pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <p className="font-display text-3xl text-noir-encre">
+                  {room.price}{" "}
+                  <span className="font-body text-base text-terre/50">
+                    € / nuit
+                  </span>
+                </p>
+                <Link href="/contact" className="btn-gold text-center">
+                  Réserver cette chambre
+                </Link>
+              </div>
             </div>
-          </div>
+          </ScrollReveal>
+
+          {/* Tissu d'Époque */}
+          <ScrollReveal delay={0.1}>
+            <div className="bg-ivoire-chaud p-8 md:p-10 mb-14">
+              <h2 className="font-display text-2xl md:text-3xl text-noir-encre mb-5">
+                Histoire &amp; Tissu d&apos;Époque
+              </h2>
+              <p className="font-accent italic text-lg text-noir-encre/80 mb-4">
+                {room.patternName}
+              </p>
+              <p className="font-body text-base text-noir-encre/65 leading-relaxed">
+                Ces tissus rares ont été restaurés par des artisans experts en
+                conservation textile, préservant ainsi l&apos;authenticité et le
+                caractère unique de cette chambre historique.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* Équipements */}
+          <ScrollReveal delay={0.1}>
+            <h2 className="font-display text-2xl md:text-3xl text-noir-encre mb-8">
+              Équipements &amp; Services
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-14">
+              {room.amenities.map((amenity) => (
+                <div
+                  key={amenity}
+                  className="flex items-center gap-3 bg-ivoire-chaud p-4"
+                >
+                  <Check
+                    size={18}
+                    className="text-or-ancien shrink-0"
+                    strokeWidth={2}
+                  />
+                  <span className="font-body text-lg text-noir-encre">
+                    {amenity}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
+
+          {/* Services Inclus */}
+          <ScrollReveal delay={0.1}>
+            <h2 className="font-display text-2xl md:text-3xl text-noir-encre mb-8">
+              Services Inclus
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-14">
+              {[
+                "Petit-déjeuner continental",
+                "Wi-Fi haut débit",
+                "Service en chambre 24h/24",
+                "Accès au jardin privé",
+                "Conciergerie dédiée",
+                "Parking privé",
+                "Presse quotidienne",
+                "Produits de toilette L'Occitane",
+              ].map((service) => (
+                <div key={service} className="flex items-center gap-3">
+                  <Check
+                    size={16}
+                    className="text-or-ancien shrink-0"
+                    strokeWidth={2}
+                  />
+                  <span className="font-body text-base text-noir-encre/75">
+                    {service}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
+
+          {/* CTA */}
+          <ScrollReveal>
+            <div className="text-center">
+              <Link href="/contact" className="btn-gold-hero">
+                Réserver cette chambre
+              </Link>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Gallery */}
-      <section className="section-padding bg-blanc-lin">
+      <section className="section-padding bg-ivoire-chaud">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <ScrollReveal>
             <p className="font-sans text-[11px] tracking-[0.2em] uppercase text-or-ancien mb-3 text-center">
@@ -161,36 +228,6 @@ export default async function ChambreDetailPage({
               </ScrollReveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Amenities */}
-      <section className="section-padding bg-ivoire-chaud">
-        <div className="max-w-4xl mx-auto px-6 md:px-10">
-          <ScrollReveal>
-            <p className="font-sans text-[11px] tracking-[0.2em] uppercase text-or-ancien mb-3 text-center">
-              Équipements
-            </p>
-            <h2 className="font-display text-2xl md:text-3xl text-noir-encre mb-10 text-center">
-              Tout pour votre confort
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal delay={0.1}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-4">
-              {room.amenities.map((amenity) => (
-                <div key={amenity} className="flex items-center gap-3">
-                  <Check
-                    size={14}
-                    className="text-or-ancien shrink-0"
-                    strokeWidth={2}
-                  />
-                  <span className="font-body text-anthracite">
-                    {amenity}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </ScrollReveal>
         </div>
       </section>
 
