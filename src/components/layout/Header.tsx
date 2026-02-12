@@ -149,11 +149,11 @@ export default function Header() {
                 transition={{ delay: 0.3, duration: 0.8 }}
               >
                 <Image
-                  src="/logo-mirande.webp"
+                  src="/logo.webp"
                   alt="La Mirande"
                   width={200}
-                  height={40}
-                  className="h-6 w-auto brightness-0 invert opacity-25"
+                  height={230}
+                  className="h-16 w-auto brightness-0 invert opacity-30"
                 />
               </motion.div>
             </div>

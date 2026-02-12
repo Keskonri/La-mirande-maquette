@@ -1,8 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
+import { ArrowRight } from "lucide-react";
 
 export default function IntroSection() {
   return (
@@ -57,6 +59,15 @@ export default function IntroSection() {
                 une histoire d&apos;exigence et de passion. Ici, le luxe
                 n&apos;est pas un artifice. C&apos;est une manière de vivre.
               </p>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.5}>
+              <Link
+                href="/histoire"
+                className="btn-outline inline-flex items-center gap-2"
+              >
+                Découvrir notre histoire <ArrowRight size={14} />
+              </Link>
             </ScrollReveal>
           </div>
         </div>
