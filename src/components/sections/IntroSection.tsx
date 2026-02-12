@@ -21,6 +21,7 @@ export default function IntroSection() {
               src="https://www.la-mirande.fr/_novaimg/4661034-1432407_0_0_3072_2048_2000_1333.webp"
               alt="Façade en pierre dorée de La Mirande"
               fill
+              quality={75}
               className="object-cover img-warm"
               sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 60vw, 768px"
             />

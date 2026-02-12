@@ -192,6 +192,7 @@ export default function ContactPage() {
                     src="https://www.la-mirande.fr/_novaimg/4661033-1432406_0_0_4800_3200_2000_1333.webp"
                     alt="Extérieurs de La Mirande — Avignon"
                     fill
+                    quality={75}
                     className="object-cover img-warm opacity-70"
                     sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 640px"
                   />

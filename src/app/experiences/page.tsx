@@ -57,6 +57,7 @@ export default function ExperiencesPage() {
                     src={exp.image}
                     alt={exp.name}
                     fill
+                    quality={75}
                     className="object-cover img-warm"
                     sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 640px"
                   />

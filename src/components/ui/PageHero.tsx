@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { LazyMotion, domAnimation, m } from "framer-motion";
+import { m } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 
 interface PageHeroProps {
@@ -32,8 +32,7 @@ export default function PageHero({
         <div className="absolute inset-0 bg-gradient-to-b from-noir-encre/50 via-noir-encre/30 to-noir-encre/70" />
       </div>
 
-      <LazyMotion features={domAnimation}>
-        <div className="relative z-10 h-full flex flex-col items-center justify-end pb-16 md:pb-20 text-center px-6">
+      <div className="relative z-10 h-full flex flex-col items-center justify-end pb-16 md:pb-20 text-center px-6">
           {breadcrumb && (
             <m.nav
               initial={{ opacity: 0 }}
@@ -79,7 +78,6 @@ export default function PageHero({
             </m.p>
           )}
         </div>
-      </LazyMotion>
     </section>
   );
 }

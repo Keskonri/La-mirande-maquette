@@ -32,6 +32,7 @@ export default function ChambresSection() {
                       src={room.image}
                       alt={`Chambre ${room.name} — ${room.vue}`}
                       fill
+                      quality={75}
                       className="object-cover img-warm transition-transform duration-[1.2s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
                       sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 640px"
                     />

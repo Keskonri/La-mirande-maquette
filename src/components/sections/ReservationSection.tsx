@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { LazyMotion, domAnimation, m, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { chambres } from "@/data/mirande";
 import {
@@ -47,6 +47,7 @@ export default function ReservationSection() {
             src="https://www.la-mirande.fr/_novaimg/4661032-1432405_0_0_4800_3200_2000_1333.webp"
             alt="Jardin de La Mirande au crépuscule"
             fill
+            quality={75}
             className="object-cover img-warm"
             sizes="100vw"
           />
@@ -170,7 +171,6 @@ export default function ReservationSection() {
       </section>
 
       {/* Confirmation modal */}
-      <LazyMotion features={domAnimation}>
       <AnimatePresence>
         {showModal && (
           <>
@@ -289,7 +289,6 @@ export default function ReservationSection() {
           </>
         )}
       </AnimatePresence>
-      </LazyMotion>
     </>
   );
 }

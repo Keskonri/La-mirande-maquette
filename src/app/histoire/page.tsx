@@ -102,6 +102,7 @@ export default function HistoirePage() {
                         src={p.images[0]}
                         alt={p.titre}
                         fill
+                        quality={75}
                         className="object-cover img-warm"
                         sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 640px"
                       />
@@ -114,6 +115,7 @@ export default function HistoirePage() {
                             src={img}
                             alt={`${p.titre} — ${j + 1}`}
                             fill
+                            quality={75}
                             className="object-cover img-warm"
                             sizes="(max-width: 1024px) 50vw, (max-width: 1280px) 25vw, 320px"
                           />

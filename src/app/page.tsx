@@ -27,6 +27,7 @@ function ChambresPreview() {
                     src={room.image}
                     alt={`Chambre ${room.name}`}
                     fill
+                    quality={75}
                     className="object-cover img-warm transition-transform duration-[1.2s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
                     sizes="(max-width: 768px) 100vw, (max-width: 1280px) 33vw, 420px"
                   />
@@ -94,6 +95,7 @@ function TablesPreview() {
                 src={resto.image}
                 alt={resto.name}
                 fill
+                quality={75}
                 className="object-cover img-warm"
                 sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 640px"
               />
@@ -137,6 +139,7 @@ function ExperiencesPreview() {
                   src={exp.image}
                   alt={exp.name}
                   fill
+                  quality={75}
                   className="object-cover img-warm transition-transform duration-700 group-hover:scale-[1.04]"
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 640px"
                 />

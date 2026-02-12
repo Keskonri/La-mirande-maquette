@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { LazyMotion, domAnimation, m, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { testimonials } from "@/data/mirande";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { Quote } from "lucide-react";
@@ -34,8 +34,7 @@ export default function TestimonialsSection() {
           </p>
         </ScrollReveal>
 
-        <LazyMotion features={domAnimation}>
-          <div className="min-h-[240px] md:min-h-[200px] flex items-center justify-center">
+        <div className="min-h-[240px] md:min-h-[200px] flex items-center justify-center">
             <AnimatePresence mode="wait">
               <m.div
                 key={current}
@@ -60,7 +59,6 @@ export default function TestimonialsSection() {
               </m.div>
             </AnimatePresence>
           </div>
-        </LazyMotion>
 
         {/* Dots */}
         <div className="flex justify-center gap-3 mt-10">

@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LazyMotion, domAnimation, m, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { hotel } from "@/data/mirande";
 import { Facebook, Instagram, Youtube } from "lucide-react";
 import Image from "next/image";
@@ -110,7 +110,6 @@ export default function Header() {
       </header>
 
       {/* Backdrop overlay */}
-      <LazyMotion features={domAnimation}>
       <AnimatePresence>
         {menuOpen && (
           <m.div
@@ -233,7 +232,6 @@ export default function Header() {
           </m.nav>
         )}
       </AnimatePresence>
-      </LazyMotion>
 
       {/* Social icons — fixed bottom left */}
       <div className="fixed bottom-2.5 left-8 md:bottom-3 md:left-10 z-30 hidden md:flex items-center gap-2.5">
