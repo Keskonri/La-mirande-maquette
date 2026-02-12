@@ -18,6 +18,7 @@ export const hotel = {
   },
   navigation: [
     { label: "La Maison", href: "/#maison" },
+    { label: "Histoire", href: "/histoire" },
     { label: "Chambres", href: "/chambres" },
     { label: "Tables", href: "/tables" },
     { label: "Expériences", href: "/experiences" },
