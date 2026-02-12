@@ -34,7 +34,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Booking hero with parallax */}
-      <section ref={heroRef} className="relative pt-40 pb-0 md:pt-48 overflow-hidden">
+      <section ref={heroRef} className="relative min-h-screen flex flex-col overflow-hidden">
         <motion.div className="absolute inset-0 will-change-transform" style={{ y: bgY }}>
           <Image
             src="https://www.la-mirande.fr/_novaimg/4661031-1432404_0_0_4800_3200_2000_1333.webp"
@@ -47,7 +47,7 @@ export default function ContactPage() {
         </motion.div>
         <div className="absolute inset-0 bg-gradient-to-b from-noir-encre/55 via-noir-encre/45 to-noir-encre/75" />
 
-        <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-10 text-center pb-24 md:pb-32">
+        <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-10 text-center flex-1 flex flex-col justify-center pt-32 pb-12">
           <ScrollReveal>
             <p className="font-sans text-[12px] tracking-[0.45em] uppercase text-or-ancien/90 mb-5">
               Réservation directe
