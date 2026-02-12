@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { LazyMotion, domAnimation, m, AnimatePresence } from "framer-motion";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { chambres } from "@/data/mirande";
 import {
@@ -170,11 +170,12 @@ export default function ReservationSection() {
       </section>
 
       {/* Confirmation modal */}
+      <LazyMotion features={domAnimation}>
       <AnimatePresence>
         {showModal && (
           <>
             {/* Backdrop */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -184,7 +185,7 @@ export default function ReservationSection() {
             />
 
             {/* Modal */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 100 }}
@@ -202,7 +203,7 @@ export default function ReservationSection() {
                 </button>
 
                 {/* Check icon */}
-                <motion.div
+                <m.div
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{
@@ -213,7 +214,7 @@ export default function ReservationSection() {
                   className="w-16 h-16 rounded-full bg-or-ancien/10 border border-or-ancien/20 flex items-center justify-center mx-auto mb-6"
                 >
                   <Check size={28} className="text-or-ancien" strokeWidth={1.5} />
-                </motion.div>
+                </m.div>
 
                 <h3 className="font-display text-2xl md:text-3xl text-noir-encre text-center mb-3">
                   Demande enregistrée
@@ -284,10 +285,11 @@ export default function ReservationSection() {
                   Parfait, merci
                 </button>
               </div>
-            </motion.div>
+            </m.div>
           </>
         )}
       </AnimatePresence>
+      </LazyMotion>
     </>
   );
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useInView, useMotionValue, useSpring, motion } from "framer-motion";
+import { useInView, useMotionValue, useSpring } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 interface AnimatedCounterProps {
@@ -39,12 +39,12 @@ export default function AnimatedCounter({
         {prefix && (
           <span className="font-accent text-2xl text-or-ancien">{prefix}</span>
         )}
-        <motion.span
+        <span
           className="font-display text-4xl md:text-5xl text-or-ancien"
           style={{ fontVariantNumeric: "tabular-nums" }}
         >
           {isInView ? <AnimatedNumber spring={springValue} /> : "0"}
-        </motion.span>
+        </span>
         {suffix && (
           <span className="font-accent text-2xl text-or-ancien">{suffix}</span>
         )}

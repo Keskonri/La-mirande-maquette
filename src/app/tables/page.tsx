@@ -59,7 +59,7 @@ export default function TablesPage() {
                     alt={resto.name}
                     fill
                     className="object-cover img-warm"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 640px"
                   />
                 </div>
 

@@ -222,7 +222,7 @@ export default async function ChambreDetailPage({
                     alt={`${room.name} — vue ${i + 1}`}
                     fill
                     className="object-cover img-warm hover:scale-[1.03] transition-transform duration-700"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 33vw, 420px"
                   />
                 </div>
               </ScrollReveal>

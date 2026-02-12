@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { LazyMotion, domAnimation, m, AnimatePresence } from "framer-motion";
 import { gastronomie } from "@/data/mirande";
 import SectionTitle from "@/components/ui/SectionTitle";
 import ScrollReveal from "@/components/ui/ScrollReveal";
@@ -41,8 +41,9 @@ export default function GastronomieSection() {
         </ScrollReveal>
 
         {/* Active tab content */}
+        <LazyMotion features={domAnimation}>
         <AnimatePresence mode="wait">
-          <motion.div
+          <m.div
             key={active.id}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -57,7 +58,7 @@ export default function GastronomieSection() {
                 alt={active.name}
                 fill
                 className="object-cover img-warm"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 640px"
               />
               <div className="absolute inset-0 shadow-[inset_0_-60px_40px_-30px_rgba(26,26,26,0.1)] pointer-events-none" />
             </div>
@@ -97,8 +98,9 @@ export default function GastronomieSection() {
                 {active.cta}
               </a>
             </div>
-          </motion.div>
+          </m.div>
         </AnimatePresence>
+        </LazyMotion>
       </div>
     </section>
   );

@@ -33,16 +33,14 @@ export default function ChambresSection() {
                       alt={`Chambre ${room.name} — ${room.vue}`}
                       fill
                       className="object-cover img-warm transition-transform duration-[1.2s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
-                      sizes="(max-width: 768px) 100vw, 50vw"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 640px"
                     />
                     {/* Gradient overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-noir-encre/60 via-noir-encre/5 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
                     {/* Category badge */}
-                    <div className="absolute top-5 left-5">
-                      <span className="inline-block font-sans text-[10px] tracking-[0.2em] uppercase text-blanc-lin/90 border border-blanc-lin/25 backdrop-blur-sm px-3 py-1.5 bg-noir-encre/20">
-                        {room.category}
-                      </span>
-                    </div>
+                    <span className="absolute top-5 left-5 inline-block font-sans text-[10px] tracking-[0.2em] uppercase text-blanc-lin/90 border border-blanc-lin/25 backdrop-blur-sm px-3 py-1.5 bg-noir-encre/20">
+                      {room.category}
+                    </span>
                     {/* Bottom content */}
                     <div className="absolute bottom-0 inset-x-0 p-6 md:p-8">
                       <h3 className="font-display text-2xl md:text-3xl text-blanc-lin mb-2">

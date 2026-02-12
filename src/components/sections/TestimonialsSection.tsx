@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { LazyMotion, domAnimation, m, AnimatePresence } from "framer-motion";
 import { testimonials } from "@/data/mirande";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { Quote } from "lucide-react";
@@ -34,31 +34,33 @@ export default function TestimonialsSection() {
           </p>
         </ScrollReveal>
 
-        <div className="min-h-[240px] md:min-h-[200px] flex items-center justify-center">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={current}
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -16 }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="flex flex-col items-center"
-            >
-              <blockquote className="font-accent italic text-xl md:text-2xl lg:text-3xl text-blanc-lin/90 leading-relaxed max-w-3xl">
-                &laquo; {t.quote} &raquo;
-              </blockquote>
+        <LazyMotion features={domAnimation}>
+          <div className="min-h-[240px] md:min-h-[200px] flex items-center justify-center">
+            <AnimatePresence mode="wait">
+              <m.div
+                key={current}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -16 }}
+                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                className="flex flex-col items-center"
+              >
+                <blockquote className="font-accent italic text-xl md:text-2xl lg:text-3xl text-blanc-lin/90 leading-relaxed max-w-3xl">
+                  &laquo; {t.quote} &raquo;
+                </blockquote>
 
-              <div className="mt-8 flex flex-col items-center gap-1">
-                <p className="font-sans text-sm tracking-wider text-blanc-lin/80">
-                  {t.author}
-                </p>
-                <p className="font-sans text-xs text-blanc-lin/40">
-                  {t.origin} — {t.context}
-                </p>
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
+                <div className="mt-8 flex flex-col items-center gap-1">
+                  <p className="font-sans text-sm tracking-wider text-blanc-lin/80">
+                    {t.author}
+                  </p>
+                  <p className="font-sans text-xs text-blanc-lin/40">
+                    {t.origin} — {t.context}
+                  </p>
+                </div>
+              </m.div>
+            </AnimatePresence>
+          </div>
+        </LazyMotion>
 
         {/* Dots */}
         <div className="flex justify-center gap-3 mt-10">

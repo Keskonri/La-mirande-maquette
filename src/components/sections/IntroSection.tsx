@@ -22,7 +22,7 @@ export default function IntroSection() {
               alt="Façade en pierre dorée de La Mirande"
               fill
               className="object-cover img-warm"
-              sizes="(max-width: 1024px) 100vw, 60vw"
+              sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 60vw, 768px"
             />
           </ScrollReveal>
 

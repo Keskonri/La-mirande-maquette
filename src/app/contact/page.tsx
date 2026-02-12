@@ -193,7 +193,7 @@ export default function ContactPage() {
                     alt="Extérieurs de La Mirande — Avignon"
                     fill
                     className="object-cover img-warm opacity-70"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 640px"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="bg-blanc-lin/90 backdrop-blur-sm px-6 py-4 text-center">

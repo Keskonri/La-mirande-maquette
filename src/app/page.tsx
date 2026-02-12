@@ -28,7 +28,7 @@ function ChambresPreview() {
                     alt={`Chambre ${room.name}`}
                     fill
                     className="object-cover img-warm transition-transform duration-[1.2s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 33vw, 420px"
                   />
                   {/* Gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-noir-encre/70 via-noir-encre/10 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
@@ -95,7 +95,7 @@ function TablesPreview() {
                 alt={resto.name}
                 fill
                 className="object-cover img-warm"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 640px"
               />
             </div>
             <div>
@@ -138,7 +138,7 @@ function ExperiencesPreview() {
                   alt={exp.name}
                   fill
                   className="object-cover img-warm transition-transform duration-700 group-hover:scale-[1.04]"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 640px"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-noir-encre/70 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">

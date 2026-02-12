@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
+import { LazyMotion, domAnimation, m, AnimatePresence } from "framer-motion";
 import { hotel } from "@/data/mirande";
 import { Facebook, Instagram, Youtube } from "lucide-react";
 import Image from "next/image";
@@ -110,9 +110,10 @@ export default function Header() {
       </header>
 
       {/* Backdrop overlay */}
+      <LazyMotion features={domAnimation}>
       <AnimatePresence>
         {menuOpen && (
-          <motion.div
+          <m.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -126,7 +127,7 @@ export default function Header() {
       {/* Slide-in panel — left */}
       <AnimatePresence>
         {menuOpen && (
-          <motion.nav
+          <m.nav
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
@@ -143,7 +144,7 @@ export default function Header() {
                 <span className="block w-7 h-[1.5px] bg-blanc-lin/80 rotate-45 translate-y-[3.5px] transition-all duration-500" />
                 <span className="block w-7 h-[1.5px] bg-blanc-lin/80 -rotate-45 -translate-y-[3.5px] transition-all duration-500" />
               </button>
-              <motion.div
+              <m.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3, duration: 0.8 }}
@@ -155,7 +156,7 @@ export default function Header() {
                   height={230}
                   className="h-16 w-auto brightness-0 invert opacity-30"
                 />
-              </motion.div>
+              </m.div>
             </div>
 
             {/* Navigation links */}
@@ -166,7 +167,7 @@ export default function Header() {
                     ? pathname === "/"
                     : pathname.startsWith(item.href);
                 return (
-                  <motion.div
+                  <m.div
                     key={item.href}
                     initial={{ opacity: 0, x: -24 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -196,14 +197,14 @@ export default function Header() {
                         }`}
                       />
                     </Link>
-                  </motion.div>
+                  </m.div>
                 );
               })}
             </div>
 
             {/* Bottom info */}
             <div className="px-12 pb-10">
-              <motion.div
+              <m.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
@@ -227,11 +228,12 @@ export default function Header() {
                 >
                   {hotel.email}
                 </a>
-              </motion.div>
+              </m.div>
             </div>
-          </motion.nav>
+          </m.nav>
         )}
       </AnimatePresence>
+      </LazyMotion>
 
       {/* Social icons — fixed bottom left */}
       <div className="fixed bottom-2.5 left-8 md:bottom-3 md:left-10 z-30 hidden md:flex items-center gap-2.5">

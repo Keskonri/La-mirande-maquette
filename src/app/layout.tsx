@@ -11,6 +11,7 @@ import "./globals.css";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
+  weight: ["400"],
   variable: "--font-display",
   display: "swap",
 });
@@ -25,12 +26,14 @@ const cormorant = Cormorant_Garamond({
 
 const ebGaramond = EB_Garamond({
   subsets: ["latin"],
+  weight: ["400"],
   variable: "--font-body",
   display: "swap",
 });
 
 const inter = Inter({
   subsets: ["latin"],
+  weight: ["400", "500"],
   variable: "--font-sans",
   display: "swap",
 });

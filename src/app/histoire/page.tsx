@@ -103,7 +103,7 @@ export default function HistoirePage() {
                         alt={p.titre}
                         fill
                         className="object-cover img-warm"
-                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 640px"
                       />
                     </div>
                   ) : (
@@ -115,7 +115,7 @@ export default function HistoirePage() {
                             alt={`${p.titre} — ${j + 1}`}
                             fill
                             className="object-cover img-warm"
-                            sizes="(max-width: 1024px) 50vw, 25vw"
+                            sizes="(max-width: 1024px) 50vw, (max-width: 1280px) 25vw, 320px"
                           />
                         </div>
                       ))}
