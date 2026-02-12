@@ -312,6 +312,13 @@ export const engagements = [
   },
 ] as const;
 
+export const avantages = [
+  { label: "Late check-out offert" },
+  { label: "Surclassement sous réserve" },
+  { label: "Petit-déjeuner inclus" },
+  { label: "Annulation flexible" },
+] as const;
+
 export const testimonials = [
   {
     quote:

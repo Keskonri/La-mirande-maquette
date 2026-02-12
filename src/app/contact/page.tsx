@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import { hotel } from "@/data/mirande";
+import { hotel, avantages } from "@/data/mirande";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
@@ -16,12 +16,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-const avantages = [
-  { icon: Clock, label: "Late check-out offert" },
-  { icon: ArrowUpCircle, label: "Surclassement sous réserve" },
-  { icon: Coffee, label: "Petit-déjeuner inclus" },
-  { icon: ShieldCheck, label: "Annulation flexible" },
-];
+const avantageIcons = [Clock, ArrowUpCircle, Coffee, ShieldCheck];
 
 export default function ContactPage() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -118,21 +113,24 @@ export default function ContactPage() {
         <div className="relative z-10 bg-noir-encre/50 backdrop-blur-md border-t border-blanc-lin/8">
           <div className="max-w-5xl mx-auto px-6 md:px-10 py-5">
             <div className="flex flex-wrap justify-center gap-8 md:gap-14">
-              {avantages.map((a) => (
-                <div
-                  key={a.label}
-                  className="flex items-center gap-3 text-blanc-lin/70"
-                >
-                  <a.icon
-                    size={18}
-                    strokeWidth={1.3}
-                    className="text-or-ancien/80"
-                  />
-                  <span className="font-sans text-[12px] tracking-[0.04em]">
-                    {a.label}
-                  </span>
-                </div>
-              ))}
+              {avantages.map((a, i) => {
+                const Icon = avantageIcons[i];
+                return (
+                  <div
+                    key={a.label}
+                    className="flex items-center gap-3 text-blanc-lin/70"
+                  >
+                    <Icon
+                      size={18}
+                      strokeWidth={1.3}
+                      className="text-or-ancien/80"
+                    />
+                    <span className="font-sans text-[12px] tracking-[0.04em]">
+                      {a.label}
+                    </span>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

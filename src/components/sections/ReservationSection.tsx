@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { m, AnimatePresence } from "framer-motion";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import { chambres } from "@/data/mirande";
+import { chambres, avantages } from "@/data/mirande";
 import {
   Clock,
   ArrowUpCircle,
@@ -14,12 +14,7 @@ import {
   X,
 } from "lucide-react";
 
-const avantages = [
-  { icon: Clock, label: "Late check-out offert" },
-  { icon: ArrowUpCircle, label: "Surclassement sous réserve" },
-  { icon: Coffee, label: "Petit-déjeuner inclus" },
-  { icon: ShieldCheck, label: "Annulation flexible" },
-];
+const avantageIcons = [Clock, ArrowUpCircle, Coffee, ShieldCheck];
 
 export default function ReservationSection() {
   const [arrivee, setArrivee] = useState("");
@@ -150,21 +145,24 @@ export default function ReservationSection() {
           {/* Avantages */}
           <ScrollReveal delay={0.3}>
             <div className="flex flex-wrap justify-center gap-8 md:gap-12 mt-12">
-              {avantages.map((a) => (
-                <div
-                  key={a.label}
-                  className="flex items-center gap-2.5 text-creme/70"
-                >
-                  <a.icon
-                    size={15}
-                    strokeWidth={1.2}
-                    className="text-or-ancien/60"
-                  />
-                  <span className="font-sans text-[11px] tracking-[0.05em]">
-                    {a.label}
-                  </span>
-                </div>
-              ))}
+              {avantages.map((a, i) => {
+                const Icon = avantageIcons[i];
+                return (
+                  <div
+                    key={a.label}
+                    className="flex items-center gap-2.5 text-creme/70"
+                  >
+                    <Icon
+                      size={15}
+                      strokeWidth={1.2}
+                      className="text-or-ancien/60"
+                    />
+                    <span className="font-sans text-[11px] tracking-[0.05em]">
+                      {a.label}
+                    </span>
+                  </div>
+                );
+              })}
             </div>
           </ScrollReveal>
         </div>

@@ -5,8 +5,9 @@ import IntroSection from "@/components/sections/IntroSection";
 import EngagementsSection from "@/components/sections/EngagementsSection";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionTitle from "@/components/ui/SectionTitle";
+import RoomCard from "@/components/ui/RoomCard";
 import { chambres, gastronomie, experiences } from "@/data/mirande";
-import { ArrowRight, Maximize2, Eye } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 function ChambresPreview() {
   const preview = chambres.slice(0, 3);
@@ -21,51 +22,7 @@ function ChambresPreview() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {preview.map((room, i) => (
             <ScrollReveal key={room.slug} delay={i * 0.1}>
-              <Link href={`/chambres/${room.slug}`} className="group block">
-                <div className="relative aspect-[3/4] overflow-hidden">
-                  <Image
-                    src={room.image}
-                    alt={`Chambre ${room.name}`}
-                    fill
-                    quality={75}
-                    className="object-cover img-warm transition-transform duration-[1.2s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 33vw, 420px"
-                  />
-                  {/* Gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-noir-encre/70 via-noir-encre/10 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-                  {/* Category badge */}
-                  <div className="absolute top-4 left-4">
-                    <span className="inline-block font-sans text-[9px] tracking-[0.2em] uppercase text-blanc-lin/90 border border-blanc-lin/25 backdrop-blur-sm px-2.5 py-1 bg-noir-encre/20">
-                      {room.category}
-                    </span>
-                  </div>
-                  {/* Bottom content */}
-                  <div className="absolute bottom-0 inset-x-0 p-5 md:p-6">
-                    <h3 className="font-display text-xl md:text-[22px] text-blanc-lin mb-1.5">
-                      {room.name}
-                    </h3>
-                    <div className="flex items-center gap-3 font-sans text-[10px] tracking-wide text-creme/70">
-                      <span className="flex items-center gap-1">
-                        <Maximize2 size={10} strokeWidth={1.5} /> {room.surface}
-                      </span>
-                      <span className="w-px h-2.5 bg-blanc-lin/20" />
-                      <span className="flex items-center gap-1">
-                        <Eye size={10} strokeWidth={1.5} /> {room.vue}
-                      </span>
-                    </div>
-                    {/* Price + CTA */}
-                    <div className="mt-3 pt-3 border-t border-or-ancien/25 flex items-center justify-between">
-                      <span className="font-display text-lg text-or-ancien">
-                        {room.price}&nbsp;€
-                        <span className="font-body text-[11px] text-blanc-lin/35 ml-0.5">/ nuit</span>
-                      </span>
-                      <span className="inline-flex items-center gap-1 font-sans text-[11px] text-or-ancien/80 translate-x-0 group-hover:translate-x-1 transition-transform duration-500">
-                        Voir <ArrowRight size={12} />
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </Link>
+              <RoomCard room={room} variant="compact" />
             </ScrollReveal>
           ))}
         </div>

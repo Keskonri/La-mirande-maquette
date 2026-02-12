@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import CTASection from "@/components/sections/CTASection";
 import { experiences } from "@/data/mirande";
 import { ArrowRight } from "lucide-react";
 
@@ -85,23 +86,11 @@ export default function ExperiencesPage() {
       ))}
 
       {/* CTA */}
-      <section className="section-padding bg-noir-encre text-center">
-        <ScrollReveal>
-          <p className="font-sans text-[11px] tracking-[0.3em] uppercase text-or-ancien/70 mb-4">
-            Sur mesure
-          </p>
-          <h2 className="font-display text-3xl md:text-4xl text-blanc-lin mb-6">
-            Une expérience sur mesure
-          </h2>
-          <p className="font-accent italic text-lg text-creme/70 mb-10 max-w-xl mx-auto">
-            Privatisation, événement, demande particulière — notre conciergerie
-            est à votre écoute
-          </p>
-          <Link href="/contact" className="btn-gold">
-            Nous contacter
-          </Link>
-        </ScrollReveal>
-      </section>
+      <CTASection
+        surtitre="Sur mesure"
+        title="Une expérience sur mesure"
+        description="Privatisation, événement, demande particulière — notre conciergerie est à votre écoute"
+      />
     </>
   );
 }

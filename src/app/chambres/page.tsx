@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import CTASection from "@/components/sections/CTASection";
 import { chambres } from "@/data/mirande";
 import { ArrowRight, Maximize2, Eye, BedDouble } from "lucide-react";
 
@@ -114,23 +115,13 @@ export default function ChambresPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-noir-encre text-center">
-        <ScrollReveal>
-          <p className="font-sans text-[11px] tracking-[0.3em] uppercase text-or-ancien/70 mb-4">
-            Réservation directe
-          </p>
-          <h2 className="font-display text-3xl md:text-4xl text-blanc-lin mb-6">
-            Réservez au meilleur tarif garanti
-          </h2>
-          <p className="font-accent italic text-lg text-creme/70 mb-10 max-w-xl mx-auto">
-            Late check-out, surclassement, petit-déjeuner — les avantages de la
-            réservation directe
-          </p>
-          <Link href="/contact" className="btn-gold">
-            Réserver votre chambre
-          </Link>
-        </ScrollReveal>
-      </section>
+      <CTASection
+        surtitre="Réservation directe"
+        title="Réservez au meilleur tarif garanti"
+        description="Late check-out, surclassement, petit-déjeuner — les avantages de la réservation directe"
+        ctaText="Réserver votre chambre"
+        ctaHref="/contact"
+      />
     </>
   );
 }

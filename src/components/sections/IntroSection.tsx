@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import { ArrowRight } from "lucide-react";
 
 export default function IntroSection() {

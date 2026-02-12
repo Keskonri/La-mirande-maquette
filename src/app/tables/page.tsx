@@ -3,6 +3,7 @@ import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionTitle from "@/components/ui/SectionTitle";
+import CTASection from "@/components/sections/CTASection";
 import { gastronomie } from "@/data/mirande";
 import { Clock, ArrowRight } from "lucide-react";
 
@@ -100,23 +101,11 @@ export default function TablesPage() {
       ))}
 
       {/* CTA */}
-      <section className="section-padding bg-noir-encre text-center">
-        <ScrollReveal>
-          <p className="font-sans text-[11px] tracking-[0.3em] uppercase text-or-ancien/70 mb-4">
-            Réservation
-          </p>
-          <h2 className="font-display text-3xl md:text-4xl text-blanc-lin mb-6">
-            Réservez votre table
-          </h2>
-          <p className="font-accent italic text-lg text-creme/70 mb-10 max-w-xl mx-auto">
-            Pour le Restaurant Gastronomique et La Table Haute, la réservation
-            est indispensable
-          </p>
-          <Link href="/contact" className="btn-gold">
-            Nous contacter
-          </Link>
-        </ScrollReveal>
-      </section>
+      <CTASection
+        surtitre="Réservation"
+        title="Réservez votre table"
+        description="Pour le Restaurant Gastronomique et La Table Haute, la réservation est indispensable"
+      />
     </>
   );
 }
